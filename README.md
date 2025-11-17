@@ -6,8 +6,14 @@ El presente proyecto implementa un trazador de rayos (Ray Tracer) básico en C++
 
 El proceso de renderizado es inherentemente paralelo debido a que el cálculo de cada rayo es independiente de los demás, lo que constituye un caso de paralelismo masivo o embarrassingly parallel, tal como se especifica en el enunciado del proyecto. Por ello, se empleará OpenMP para paralelizar el bucle principal de píxeles mediante la directiva #pragma omp parallel for, lo que permite distribuir el trabajo entre múltiples hilos de ejecución aprovechando arquitecturas multinúcleo.
 
-En este avance se implementa la versión secuencial completa, incluyendo las intersecciones rayo–esfera y rayo–plano, y la generación del archivo de salida en formato PPM. #*En las siguientes entregas se integrará el modelo de iluminación y se evaluará el speedup obtenido al variar el número de hilos, comparando los tiempos entre la versión secuencial y la versión paralela.*#
+En este avance se implementa la versión secuencial completa, incluyendo las intersecciones rayo–esfera y rayo–plano, y la generación del archivo de salida en formato PPM. 
+#*En las siguientes entregas se integrará el modelo de iluminación y se evaluará el speedup obtenido al variar el número de hilos, comparando los tiempos entre la versión secuencial y la versión paralela.*#
 ## Abstract
+This project implements a basic ray tracer in C++, whose objective is to generate a 3D image by independently calculating the color of each pixel on the screen. A simple camera, a geometric model composed of a sphere and a plane, and ray-object intersection tests are used to determine the final color of each pixel.
+
+The rendering process is inherently parallel because the calculation of each ray is independent of the others, which constitutes a case of massively parallel or embarrassingly parallel processing, as specified in the project statement. Therefore, OpenMP will be used to parallelize the main pixel loop using the #pragma omp parallel for directive, which allows the work to be distributed among multiple threads, taking advantage of multi-core architectures.
+
+Translated with DeepL.com (free version)
 
 ## Fundamento Teórico
 3.1. Algoritmo de Ray Tracing

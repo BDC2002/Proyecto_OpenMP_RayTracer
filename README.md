@@ -13,8 +13,6 @@ This project implements a basic ray tracer in C++, whose objective is to generat
 
 The rendering process is inherently parallel because the calculation of each ray is independent of the others, which constitutes a case of massively parallel or embarrassingly parallel processing, as specified in the project statement. Therefore, OpenMP will be used to parallelize the main pixel loop using the #pragma omp parallel for directive, which allows the work to be distributed among multiple threads, taking advantage of multi-core architectures.
 
-Translated with DeepL.com (free version)
-
 ## Fundamento Teórico
 3.1. Algoritmo de Ray Tracing
 

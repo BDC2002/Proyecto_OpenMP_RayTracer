@@ -6,7 +6,7 @@ El presente proyecto implementa un trazador de rayos (Ray Tracer) básico en C++
 
 El proceso de renderizado es inherentemente paralelo debido a que el cálculo de cada rayo es independiente de los demás, lo que constituye un caso de paralelismo masivo o embarrassingly parallel, tal como se especifica en el enunciado del proyecto. Por ello, se empleará OpenMP para paralelizar el bucle principal de píxeles mediante la directiva #pragma omp parallel for, lo que permite distribuir el trabajo entre múltiples hilos de ejecución aprovechando arquitecturas multinúcleo.
 
-En este avance se implementa la versión secuencial completa, incluyendo las intersecciones rayo–esfera y rayo–plano, y la generación del archivo de salida en formato PPM. *En las siguientes entregas se integrará el modelo de iluminación y se evaluará el speedup obtenido al variar el número de hilos, comparando los tiempos entre la versión secuencial y la versión paralela.*
+En este avance se implementa la versión secuencial completa, incluyendo las intersecciones rayo–esfera y rayo–plano, y la generación del archivo de salida en formato PPM. #*En las siguientes entregas se integrará el modelo de iluminación y se evaluará el speedup obtenido al variar el número de hilos, comparando los tiempos entre la versión secuencial y la versión paralela.*#
 ## Abstract
 
 ## Fundamento Teórico
